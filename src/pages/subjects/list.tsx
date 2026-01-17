@@ -44,14 +44,14 @@ const SubjectsList = () => {
       },
       {
         id:'department',
-        accessorKey:'department',
+        accessorKey:'department.name',
         size: 150,
         header:()=> <p className="column-title ml-2">Department</p>,
         cell:({getValue}) => <Badge variant="secondary">{getValue<string>()}</Badge>,
       },
       {
         id: 'description',
-        accessorKey: 'description',
+        accessorKey: 'department.description',
         size: 300,  
         header:()=> <p className="column-title ml-2">Description</p>,
          cell:({getValue}) => <span className="truncate line-clamp-2">{getValue<string>()}</span>,
